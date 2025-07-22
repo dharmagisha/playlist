@@ -23,11 +23,11 @@
   }
 }
 .suggestion-list {
-  top: 100%;              /* keep it below the search input */
+  top: 100%;              
   left: 0;
   right: 0;
   z-index: 999;
-  max-height: 200px;      /* adjust to your design */
+  max-height: 200px;      /
   overflow-y: auto;
 }
 
@@ -67,7 +67,7 @@
   display: none;           
 }
 
-/* WhyChooseUs cards hover effect */
+
 .why-card {
   transition: transform 0.3s ease;
 }
@@ -99,8 +99,7 @@ footer {
 .back-button {
   font-weight: bold;
   font-size: 50px;
-  color: black;         /* make it bigger too, if you like */
-  border: none;
+  color: black;        
   background: none;
   cursor: pointer;
   margin-top: -20px;
@@ -109,7 +108,7 @@ footer {
 .back-buttonn {
   font-weight: bold;
   font-size: 50px;
-  color: black;         /* make it bigger too, if you like */
+  color: black;        
   border: none;
   background: none;
   cursor: pointer;
