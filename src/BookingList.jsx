@@ -12,7 +12,7 @@ const BookingList = () => {
 
     // Fetch bookings
     const fetchBookings = async () => {
-        const res = await fetch('http://localhost:5000/bookings');
+        const res = await fetch('https://playlist-json.api.onrender.com/bookings');
         const data = await res.json();
         setBookings(data);
     };
@@ -23,13 +23,13 @@ const BookingList = () => {
 
     // Delete booking
     const handleDelete = async (id) => {
-        await fetch(`http://localhost:5000/bookings/${id}`, { method: 'DELETE' });
+        await fetch(`https://playlist-json.api.onrender.com/bookings/${id}`, { method: 'DELETE' });
         fetchBookings();
     };
 
     // Update booking
     const handleUpdate = async () => {
-        await fetch(`http://localhost:5000/bookings/${editing.id}`, {
+        await fetch(`https://playlist-json.api.onrender.com/bookings/${editing.id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(editing)

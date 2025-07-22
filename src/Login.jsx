@@ -5,30 +5,33 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './Login.css'
 import {image} from './assets/assets'
+const API_URL = import.meta.env.VITE_API_URL;
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [name,setName] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    try {
-      const res = await axios.get(`http://localhost:5000/users?Email=${email}&Password=${password}&name=${name}`);
-      if (res.data.length > 0) {
-        await axios.post('http://localhost:5000/logins', {
-          Email: email,
-          loginTime: new Date().toISOString()
-        });
-        navigate('/home');
-      } else {
-        alert('Invalid email or password');
-      }
-    } catch (err) {
-      console.error(err);
-      alert('Something went wrong');
+  try {
+const res = await axios.get(`${API_URL}/users?Email=${email}&Password=${password}`);
+    if (res.data.length > 0) {
+await axios.post(`${API_URL}/logins`, {
+        Email: email,
+      
+        loginTime: new Date().toISOString()
+      });
+      navigate('/home');
+    } else {
+      alert('Invalid email or password');
     }
-  };
+  } catch (err) {
+    console.error(err);
+    alert('Something went wrong');
+  }
+};
+
 
   return (
   <div className="login-page" style={{backgroundImage:`url(${image.Back})`}}>
@@ -38,9 +41,7 @@ const Login = () => {
         <Form.Group className="mb-3">
           <Form.Control type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />
         </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Control type="text" placeholder="name" onChange={e => setName(e.target.value)} />
-        </Form.Group>
+   
         <Form.Group className="mb-3">
           <Form.Control type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
         </Form.Group>

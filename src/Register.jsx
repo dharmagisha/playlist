@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import './Register.css';
 import { image } from './assets/assets';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -14,16 +16,19 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/users?Email=${email}`);
+      const res = await axios.get(`${API_URL}/users?Email=${email}`);
       if (res.data.length > 0) {
         alert('User already exists');
       } else {
-        await axios.post('http://localhost:5000/users', {
+        await axios.post(`${API_URL}/users`, {
           Name: name,
           Email: email,
           Password: password
         });
         alert('Registration successful!');
+        setName('');
+        setEmail('');
+        setPassword('');
         navigate('/login');
       }
     } catch (err) {
@@ -32,31 +37,30 @@ const Register = () => {
     }
   };
 
- return (
-  <div className="register-page" style={{backgroundImage:`url(${image.Back})`}}>
-    <div className="register-container">
-      <h2 className="register-title" style={{color:'white', fontWeight: 'bold'}}>Sign Up</h2>
-      <Form >
-        <Form.Group className="mb-3">
-          <Form.Control type="text" placeholder="Name" onChange={e => setName(e.target.value)} />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Control type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Control type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
-        </Form.Group>
-        <Button className="register-button" onClick={handleRegister}>Sign Up</Button>
-      </Form>
+  return (
+    <div className="register-page" style={{ backgroundImage: `url(${image.Back})` }}>
+      <div className="register-container">
+        <h2 className="register-title" style={{ color: 'white', fontWeight: 'bold' }}>Sign Up</h2>
+        <Form>
+          <Form.Group className="mb-3">
+            <Form.Control type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Control type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Control type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
+          </Form.Group>
+          <Button className="register-button" onClick={handleRegister}>Sign Up</Button>
+        </Form>
 
-      <div className="register-link">
-        Already have an account?{' '}
-        <Button type="button" variant="link"  onClick={() => navigate('/login')}>Login</Button>
+        <div className="register-link">
+          Already have an account?{' '}
+          <Button type="button" variant="link" onClick={() => navigate('/login')}>Login</Button>
+        </div>
       </div>
     </div>
-  </div>
-);
-
+  );
 };
 
 export default Register;
