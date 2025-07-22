@@ -1,0 +1,90 @@
+/* Full height and width */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex center */
+.login-page {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Card styles */
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px 30px;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+
+}
+
+.login-container:hover{
+  transform: scale(1.1);
+}
+
+/* Title */
+.login-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs */
+.login-container .form-control {
+  width: 95%;
+  padding: 10px 12px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Button */
+.login-button {
+  width: 95%;
+  margin-top: 10px;
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.login-button:hover {
+  background-color: white;
+  border: none;
+  color: #121313;
+  
+}
+
+/* Link section */
+.login-link {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.login-link button {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.login-link button:hover {
+  color: #121313;
+}
