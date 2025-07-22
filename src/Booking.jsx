@@ -4,6 +4,9 @@ import { image } from './assets/assets';
 import "./App.css"
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
+
 const BookingPage = () => {
 
  const Navigate = useNavigate();
@@ -26,7 +29,7 @@ const BookingPage = () => {
     };
 
     try {
-      const response = await fetch('https://playlist-json.api.onrender.com/bookings', {
+      const response = await fetch(`${API_URL}/bookings`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(bookingData)
