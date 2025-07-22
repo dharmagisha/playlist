@@ -123,14 +123,6 @@
   ],
   "bookings": [
     {
-      "id": "912f",
-      "name": "chinju",
-      "email": "chinju@123",
-      "phone": "2657836728",
-      "days": 4,
-      "total": 6000
-    },
-    {
       "id": "c8f2",
       "name": "dharmagisha m",
       "email": "dharmagisham@gmail.com",
@@ -142,8 +134,8 @@
       "name": "dharmagisha m",
       "email": "dharmagisham@gmail.com",
       "phone": "07094512991",
-      "days": 3,
-      "total": 4500,
+      "days": 2,
+      "total": 3000,
       "id": "9eUIYVa"
     }
   ]
