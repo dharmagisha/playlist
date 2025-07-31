@@ -21,7 +21,7 @@ const bikes = [
     title: "Cruisers",
     nam: "Cruisers",
     text: "Comfortable bikes for long highway rides.",
-    img: image.Cru4
+    img: image.Cru8
   },
 
   {
@@ -52,7 +52,7 @@ const bikes = [
     title: "Classic Bikes",
     nam: "Classic Bikes",
     text: "Vintage style bikes with modern engineering.",
-    img: image.clasic
+    img: image.Class
   }
 ];
 

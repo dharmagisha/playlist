@@ -22,10 +22,14 @@ const BookingList = () => {
     fetchBookings();
   }, []);
 
-  const handleDelete = async (id) => {
+ const handleDelete = async (id) => {
+  const confirmDelete = window.confirm("Are you sure you want to delete this booking?");
+  if (confirmDelete) {
     await fetch(`${API_URL}/bookings/${id}`, { method: 'DELETE' });
-    fetchBookings();
-  };
+    fetchBookings(); 
+  }
+};
+
 
   const handleUpdate = async () => {
     await fetch(`${API_URL}/bookings/${editing.id}`, {
@@ -40,9 +44,12 @@ const BookingList = () => {
 
   return (
     <div className="p-4">
+      <Link to="/Booking">
+                      <button className="back-buttonn">←</button>
+                    </Link>
       <h2 className="mb-4 text-xl sm:text-2xl">All Bookings</h2>
 
-      <div className="space-y-2 mt-4 grid grid-cols-3 gap-2 w-300">
+      <div className="space-y-2 mt-4 grid md:grid-cols-4 sm:grid-cols-2 gap-2 md:w-300">
         {bookings.map((b) => (
           <div key={b.id} className="border rounded p-2 shadow text-xs">
             <h6><span className="font-semibold">Name:</span> {b.name}</h6>

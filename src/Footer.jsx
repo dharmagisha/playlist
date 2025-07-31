@@ -11,8 +11,8 @@ const Footer = () => {
                     <Col md={4} className="mb-3">
                         <h6 className="fw-bold">Address</h6>
                         <p className="mb-1">123 Main Street</p>
-                        <p className="mb-1">Chennai, Tamil Nadu, India</p>
-                        <p className="mb-1">Phone: +91 98765 43210</p>
+                        <p className="mb-1">kanyakumari, Tamil Nadu, India</p>
+                        <p className="mb-1">Phone: +91 98765 432**</p>
                         <p>Email: support@bikerenthub.com</p>
                     </Col>
                     <Col md={4} className="mb-3">
@@ -27,16 +27,16 @@ const Footer = () => {
                         <p className="mb-1">Your trusted bike rental partner</p>
                         <p className="mb-1">Affordable rates & easy booking</p>
                         <div className="mt-2 d-flex justify-content-center">
-                            <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer" className="footer-icon mx-2 fs-4">
+                            <a  target="_blank" rel="noopener noreferrer" className="footer-icon mx-2 fs-4">
                                 <FaInstagram />
                             </a>
-                            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="footer-icon mx-2 fs-4">
+                            <a  target="_blank" rel="noopener noreferrer" className="footer-icon mx-2 fs-4">
                                 <FaWhatsapp />
                             </a>
-                            <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="footer-icon mx-2 fs-4">
+                            <a target="_blank" rel="noopener noreferrer" className="footer-icon mx-2 fs-4">
                                 <FaFacebook />
                             </a>
-                            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="footer-icon mx-2 fs-4">
+                            <a target="_blank" rel="noopener noreferrer" className="footer-icon mx-2 fs-4">
                                 <FaLinkedin />
                             </a>
                         </div>

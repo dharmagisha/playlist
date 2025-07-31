@@ -29,7 +29,7 @@ const Register = () => {
         setName('');
         setEmail('');
         setPassword('');
-        navigate('/login');
+        navigate('/');
       }
     } catch (err) {
       console.error(err);
@@ -38,25 +38,42 @@ const Register = () => {
   };
 
   return (
-    <div className="register-page" style={{ backgroundImage: `url(${image.Back})` }}>
+   <div className="login-page" style={{ position: 'relative', fontWeight: 'bold' }}>
+  <video
+    autoPlay
+    muted
+    loop
+    style={{
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      top: 0,
+      left: 0,
+      zIndex: -1
+    }}
+  >
+    <source src={image.Video} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
       <div className="register-container">
         <h2 className="register-title" style={{ color: 'white', fontWeight: 'bold' }}>Sign Up</h2>
         <Form>
           <Form.Group className="mb-3">
-            <Form.Control type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
+            <Form.Control  className='transparent' type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Control type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+            <Form.Control className='transparent' type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Control type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
+            <Form.Control className='transparent' type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
           </Form.Group>
           <Button className="register-button" onClick={handleRegister}>Sign Up</Button>
         </Form>
 
-        <div className="register-link">
+        <div className="register-link text-white">
           Already have an account?{' '}
-          <Button type="button" variant="link" onClick={() => navigate('/login')}>Login</Button>
+          <Button type="button" variant="link" onClick={() => navigate('/')}>Login</Button>
         </div>
       </div>
     </div>

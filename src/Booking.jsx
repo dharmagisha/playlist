@@ -54,12 +54,7 @@ const BookingPage = () => {
 
 
   return (
-    <div style={{
-      backgroundImage: `url(${image.Backk})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      height: '800px',
-    }}>
+    <div className='hero'>
       <Container className="py-5" >
         <Row >
           <Col md={6}>
@@ -78,6 +73,7 @@ const BookingPage = () => {
                     <Form.Control
                       type="text"
                       value={name}
+                      className='transparent'
                       onChange={(e) => setName(e.target.value)}
                       required
                     />
@@ -87,6 +83,7 @@ const BookingPage = () => {
                     <Form.Label>Email</Form.Label>
                     <Form.Control
                       type="email"
+                      className='transparent'
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
@@ -97,6 +94,7 @@ const BookingPage = () => {
                     <Form.Label>Phone Number</Form.Label>
                     <Form.Control
                       type="tel"
+                      className='transparent'
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       required
@@ -104,9 +102,9 @@ const BookingPage = () => {
                   </Form.Group>
 
                   <Form.Group className="mb-3">
-                    <Form.Label>Select number of days (max 5):</Form.Label>
-                    <Form.Select value={days} onChange={(e) => setDays(Number(e.target.value))}>
-                      {[1, 2, 3, 4, 5].map(d => (
+                    <Form.Label >Select number of days (max 5):</Form.Label>
+                    <Form.Select className='transparent' value={days} onChange={(e) => setDays(Number(e.target.value))}>
+                      { [1, 2, 3, 4, 5].map(d => (
                         <option key={d} value={d}>{d} {d === 1 ? 'day' : 'days'}</option>
                       ))}
                     </Form.Select>
@@ -117,9 +115,9 @@ const BookingPage = () => {
                     <p>Total: <strong>₹{total}</strong></p>
                   </div>
 
-                  <strong className="text-muted small mb-3">
+                  <p><strong className="text-muted small mb-3">
                     Note: Bring original Driving License and Govt. ID proof when picking up your bike.
-                  </strong>
+                  </strong></p>
                   
                  
           <Button variant="dark" type="submit" className='mt-3'>Confirm Booking</Button>

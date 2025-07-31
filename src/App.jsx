@@ -1,6 +1,8 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './Nav'
+import Navv from './Navv'
+
 import Home from './home'
 import Book from './Book'
 import BookList from './Booklist'
@@ -19,10 +21,10 @@ const App = () => {
       <Router>
 
         <Routes>
-          <Route path='/' element={<Register />} />
-          <Route path='/Login' element={<Login />} />
-          <Route path='/booking' element={<><Nav /><Booking /></>} />
-          <Route path="/bookings" element={<BookingList />} />
+          <Route path='/Register' element={<Register />} />
+          <Route path='/' element={<Login />} />
+          <Route path='/booking' element={<><Navv /><Booking /></>} />
+          <Route path="/bookings" element={<><Navv /><BookingList /></>} />
           <Route path='/home' element={<><Nav /><Home /><Contact /><Footer /> </>} />
           <Route path='/Book' element={<><Nav /><Book /><Footer />  </>} />
           <Route path='/Book/:Bikename' element={<><Nav /><BookList /><Footer /> </>} />

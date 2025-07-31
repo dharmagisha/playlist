@@ -35,23 +35,40 @@ await axios.post(`${API_URL}/logins`, {
 
 
   return (
-  <div className="login-page" style={{backgroundImage:`url(${image.Back})`}}>
+ <div className="login-page" style={{ position: 'relative', fontWeight: 'bold' }}>
+  <video
+    autoPlay
+    muted
+    loop
+    style={{
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      top: 0,
+      left: 0,
+      zIndex: -1
+    }}
+  >
+    <source src={image.Video} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
     <div className="login-container">
       <h2 className="login-title" style={{color:'white', fontWeight: 'bold'}}>Login</h2>
       <Form>
         <Form.Group className="mb-3">
-          <Form.Control type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />
+          <Form.Control  className='transparent' type="email" placeholder="Email" onChange={e => setEmail(e.target.value)} />
         </Form.Group>
    
         <Form.Group className="mb-3">
-          <Form.Control type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+          <Form.Control   className='transparent' type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
         </Form.Group>
         <Button className="login-button" onClick={handleLogin}>Login</Button>
       </Form>
 
       <div className="login-link">
         Don’t have an account?{' '}
-          <Button type="button" variant="link" onClick={() => navigate('/')}>Sign Up</Button>
+          <Button type="button" variant="link" onClick={() => navigate('/Register')}>Sign Up</Button>
       </div>
     </div>
   </div>

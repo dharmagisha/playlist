@@ -51,8 +51,8 @@ html, body, #root {
 .login-button {
   width: 95%;
   margin-top: 10px;
-  background: transparent;
-  color: #fff;
+  background: white;
+  color: black;
   font-weight: bold;
   border: 2px solid white;
   padding: 10px;
@@ -61,9 +61,9 @@ html, body, #root {
 }
 
 .login-button:hover {
-  background-color: white;
-  border: none;
-  color: #121313;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
   
 }
 
@@ -79,5 +79,5 @@ html, body, #root {
 }
 
 .login-link button:hover {
-  color: #121313;
+  color: white;
 }

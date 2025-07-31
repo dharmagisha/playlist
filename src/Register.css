@@ -52,7 +52,7 @@
 }
 
 .register-link button:hover {
-  color: black;
+  color: white;
 }
 
 .register-container .form-control {
@@ -65,16 +65,18 @@
 .register-button {
   width: 95%;
   margin-top: 10px;
-  color: white;
+  color: black;
   border:3px solid white;
   padding: 10px;
   font-size: 16px;
-  background: transparent;
+  background: white;
   border-radius: 5px;
+  font-weight: bold;
+
 }
 .register-button:hover {
-  background-color: white;
+  background-color: transparent;
   border: 2px solid white;
-  color: black;
+  color: white;
   font-weight: bold;
 }

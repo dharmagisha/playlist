@@ -18,7 +18,6 @@
       "Password": "123456",
       "id": "7hd3C8M"
     },
-   
     {
       "Name": "heshi",
       "Email": "heshi@123",
@@ -36,113 +35,15 @@
       "Email": "onee@123",
       "Password": "123",
       "id": "w4aCFr5"
+    },
+    {
+      "Name": "demo",
+      "Email": "demo@123",
+      "Password": "1234",
+      "id": "NDuDTyC"
     }
   ],
   "logins": [
-    {
-      "id": "1cc2",
-      "Email": "dharmagisham@gmail.com",
-      "loginTime": "2025-07-16T07:23:37.048Z"
-    },
-    {
-      "id": "ff4d",
-      "Email": "",
-      "loginTime": "2025-07-17T20:21:05.308Z"
-    },
-    {
-      "id": "6323",
-      "Email": "dharmagisham@gmail.com",
-      "loginTime": "2025-07-18T04:59:47.276Z"
-    },
-    {
-      "id": "d184",
-      "Email": "dharmagisham@gmail.com",
-      "loginTime": "2025-07-18T05:03:20.032Z"
-    },
-    {
-      "id": "023a",
-      "Email": "magishaa25@gmail.com",
-      "loginTime": "2025-07-18T05:40:00.646Z"
-    },
-    {
-      "id": "2961",
-      "Email": "magishaa25@gmail.com",
-      "Name": "gisha m",
-      "loginTime": "2025-07-18T05:44:03.092Z"
-    },
-    {
-      "id": "adeb",
-      "Email": "",
-      "Name": "",
-      "loginTime": "2025-07-19T17:20:13.482Z"
-    },
-    {
-      "id": "91f4",
-      "Email": "",
-      "Name": "",
-      "loginTime": "2025-07-19T17:56:39.936Z"
-    },
-    {
-      "id": "67e1",
-      "Email": "",
-      "Name": "",
-      "loginTime": "2025-07-19T17:56:48.607Z"
-    },
-    {
-      "id": "5ffa",
-      "Email": "",
-      "Name": "",
-      "loginTime": "2025-07-19T18:10:50.197Z"
-    },
-    {
-      "id": "d908",
-      "Email": "dharmagisham@gmail.com",
-      "Name": "",
-      "loginTime": "2025-07-20T18:38:49.170Z"
-    },
-    {
-      "id": "9aa7",
-      "Email": "dharmagisham@gmail.com",
-      "Name": "dharmagisha m",
-      "loginTime": "2025-07-21T04:46:48.008Z"
-    },
-    {
-      "id": "1d7e",
-      "Email": "dharmagisham@gmail.com",
-      "Name": "dharmagisha m",
-      "loginTime": "2025-07-21T04:48:49.203Z"
-    },
-    {
-      "id": "0eae",
-      "Email": "dharmagisham@gmail.com",
-      "Name": "dharmagisha m",
-      "loginTime": "2025-07-21T06:06:58.263Z"
-    },
-    {
-      "id": "2ef4",
-      "Email": "",
-      "loginTime": "2025-07-21T19:00:57.995Z"
-    },
-    {
-      "Email": "dharmagisham@gmail.com",
-      "loginTime": "2025-07-22T05:12:52.986Z",
-      "id": "0pvBvaU"
-    },
-    {
-      "Email": "",
-      "loginTime": "2025-07-22T05:14:12.196Z",
-      "id": "5M5DRMf"
-    },
-    {
-      "Email": "",
-      "loginTime": "2025-07-22T05:31:11.500Z",
-      "id": "jvvQyem"
-    },
-    {
-      "Email": "",
-      "loginTime": "2025-07-22T06:07:22.924Z",
-      "id": "V0On4fq"
-    },
     {
       "Email": "one@123",
       "loginTime": "2025-07-22T06:08:11.474Z",
@@ -152,24 +53,49 @@
       "Email": "onee@123",
       "loginTime": "2025-07-22T06:14:35.990Z",
       "id": "LtiC46T"
+    },
+    {
+      "Email": "one@123",
+      "loginTime": "2025-07-24T06:28:51.188Z",
+      "id": "oIkJV1B"
+    },
+    {
+      "Email": "one@123",
+      "loginTime": "2025-07-24T13:23:14.460Z",
+      "id": "1ISPyA4"
+    },
+    {
+      "Email": "one@123",
+      "loginTime": "2025-07-25T04:54:33.199Z",
+      "id": "bzeTaT2"
+    },
+    {
+      "Email": "one@123",
+      "loginTime": "2025-07-25T04:58:52.465Z",
+      "id": "jXHReJG"
+    },
+    {
+      "Email": "demo@123",
+      "loginTime": "2025-07-31T01:32:59.190Z",
+      "id": "3lOpwJ8"
     }
   ],
   "bookings": [
     {
-      "id": "c8f2",
-      "name": "dharmagisha m",
-      "email": "dharmagisham@gmail.com",
-      "phone": "07094512991",
-      "days": 2,
-      "total": 3000
+      "name": "thisha",
+      "email": "user.thisha@gmail.com",
+      "phone": "1234567",
+      "days": 1,
+      "total": 1500,
+      "id": 1
     },
     {
-      "name": "dharmagisha m",
-      "email": "dharmagisham@gmail.com",
-      "phone": "07094512991",
-      "days": 2,
-      "total": 3000,
-      "id": "9eUIYVa"
+      "name": "demo",
+      "email": "demo@123",
+      "phone": "1234567",
+      "days": 5,
+      "total": 7500,
+      "id": 2
     }
   ]
 }

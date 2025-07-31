@@ -16,7 +16,7 @@ const Featured = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={image.Main}   
+            src={image.Back}   
             alt="First slide"
           />
           <Carousel.Caption>

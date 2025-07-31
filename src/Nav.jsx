@@ -31,59 +31,59 @@ const MyNavbar = () => {
 
   return (
     <Navbar expand="lg" className="bg-dark py-2" data-bs-theme="dark">
-      <Container className="justify-content-between">
-        <Navbar.Brand href="#" className="fw-bold">RideNow</Navbar.Brand>
+  <Container fluid className="d-flex justify-content-between align-items-center">
+    <Navbar.Brand as={Link} to='/home' className="fw-bold ms-4" style={{fontFamily:'cursive'}}>RideNow</Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav className="align-items-center">
+<Navbar.Collapse id="basic-navbar-nav" className="justify-content-lg-end justify-content-start ms-0">
+      <Nav className="align-items-center">
+        <div className="position-relative">
+          <Form className="d-lg-flex">
+            <InputGroup size='sm'>
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                className="small-search-input"
+                onFocus={() => setShowSuggestions(true)}
+                onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+              />
+              <InputGroup.Text>
+                <FaSearch />
+              </InputGroup.Text>
+            </InputGroup>
 
-            <div className="position-relative">
-              <Form className="d-none d-lg-flex">
-                <InputGroup size="sm">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                    className="small-search-input"
-                    onFocus={() => setShowSuggestions(true)}
-                    onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
-                  />
-                  <InputGroup.Text>
-                    <FaSearch />
-                  </InputGroup.Text>
-                </InputGroup>
-
-                {showSuggestions && (
-                  <div className="bg-white border rounded mt-1 position-absolute w-100 shadow suggestion-list">
-                    {suggestions.map((item, index) => (
-                      <div
-                        key={index}
-                        className="p-2 hover-bg"
-                        style={{ cursor: 'pointer' }}
-                        onMouseDown={() => {
-                          const routeName = suggestionMap[item];
-                          navigate(`/Book/${routeName}`);
-                        }}
-                      >
-                        {item}
-                      </div>
-                    ))}
+            {showSuggestions && (
+              <div className="bg-white border rounded mt-1 position-absolute w-100 shadow suggestion-list">
+                {suggestions.map((item, index) => (
+                  <div
+                    key={index}
+                    className="p-2 hover-bg"
+                    style={{ cursor: 'pointer' }}
+                    onMouseDown={() => {
+                      const routeName = suggestionMap[item];
+                      navigate(`/Book/${routeName}`);
+                    }}
+                  >
+                    {item}
                   </div>
-                )}
-              </Form>
-            </div>
+                ))}
+              </div>
+            )}
+          </Form>
+        </div>
 
-            <Link to='/Login' className="ms-2 my-2 my-lg-0">
-              <Button variant="outline-light fw-bold small-login-btn" size="sm">
-                Logout
-              </Button>
-            </Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        <Link to='/' className="ms-2 my-2 my-lg-0">
+          <Button variant="outline-light fw-bold small-login-btn" size="sm">
+            Logout
+          </Button>
+        </Link>
+      </Nav>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
+
   );
 };
 
